@@ -1,6 +1,5 @@
-import docx
+
 from docx.oxml import OxmlElement
-from docx.oxml.ns import qn
 from datetime import datetime
 from docx import Document
 from docx.shared import Pt
@@ -9,16 +8,16 @@ from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
 from docx import *
 from random import randint
 from copy import deepcopy
-import random
 import numpy as np
-import decimal as dc
+import bill_templates.Vorlage as vorlage
 
 def make_word(inputAnrede, inputNachname,inputVorname,inputStraße_hausnr,
               inputAddresse, inputEmail, inputBefundListe, inputLeistungen, inputBillCounter,inputPetCounter, inputTag):
     #C:\Users\Pepi\AppData\Local\Rechnung_template\
     #pathR = r"C:\Users\Pepi\AppData\Local\Rechnung_template\RechnungVorlage.docx"
-    pathR =r"RechnungVorlage.docx"
+    pathR ="RechnungVorlage.docx"
     doc = Document(pathR)
+
     befundStelle = 0
     inputTiername = inputLeistungen[0][6]
     inputTierart = inputLeistungen[0][5]
