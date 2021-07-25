@@ -3,6 +3,7 @@ from tkinter import *
 from tkinter import ttk
 import tkinter.simpledialog as sd
 
+import Excel as Excel
 import numpy as np
 from ttkthemes import ThemedTk
 import ttkbootstrap
@@ -72,6 +73,7 @@ class GUI:
     def start(self):
 
         self.load_allFiles()
+        tax = Excel.Tax(self.date_month)
         style = ttkbootstrap.Style()
 
         container1 = ttk.Frame(self.r, style = 'TFrame')
